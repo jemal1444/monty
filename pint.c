@@ -1,21 +1,19 @@
 #include "monty.h"
-
 /**
- * Description:The opcode pint prints the value at the top of the stack, followed by a new line.
- * If the stack is empty, print the error message
- * @stack: double pointer to head of stack
-  * Return: void
- */
-void m_pint(stack_t **stack, unsigned int line_number)
+ * f_pint - prints the top
+ * @head: stack head
+ * @counter: line_number
+ * Return: no return
+*/
+void f_pint(stack_t **head, unsigned int counter)
 {
-	stack_t *head = *stack;
-
-	if (var.stack_len == 0)
+	if (*head == NULL)
 	{
-		dprintf(STDOUT_FILENO,
-			"L%u: can't pint, stack empty\n",
-			line_number);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", counter);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	printf("%d\n", head->n);
+	printf("%d\n", (*head)->n);
 }

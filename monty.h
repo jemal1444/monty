@@ -7,6 +7,7 @@
 #include <fcntl.h>
 #include <string.h>
 #include <ctype.h>
+int main(int argc, char *argv[]);
 /**
  * Descriptionon Stack - doubly linked list representation of a stack (or queue)
  * @n: integer

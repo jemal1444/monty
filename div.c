@@ -1,9 +1,6 @@
 #include "monty.h"
 /**
- *Description:The opcode div divides the second top element of the stack by the top element of the stack
- *If the stack contains less than two elements, print the error message
- *The result is stored in the second top element of the stack, and the top element is removed
- *If the top element of the stack is 0, print the error message
+ * Description on f_div - divides the top two elements of the stack.
  * @head: stack head
  * @counter: line_number
  * Return: no return
